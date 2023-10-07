@@ -285,12 +285,12 @@ impl Client {
         let my_addr = socket.local_addr();
         let mut signed_id_pk = Vec::new();
         let mut relay_server = "".to_owned();
-
+/*
         if !key.is_empty() && !token.is_empty() {
             // mainly for the security of token
             allow_err!(secure_punch_connection(&mut socket, key).await);
         }
-
+*/
         let start = std::time::Instant::now();
         let mut peer_addr = Config::get_any_listen_addr(true);
         let mut peer_nat_type = NatType::UNKNOWN_NAT;
